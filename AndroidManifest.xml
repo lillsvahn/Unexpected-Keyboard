@@ -13,6 +13,19 @@
       <meta-data android:name="android.view.im" android:resource="@xml/method"/>
     </service>
 
+    <service
+        android:name="juloo.keyboard2.FoldMouseAccessibilityService"
+        android:label="FoldMouse pointer"
+        android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService"/>
+      </intent-filter>
+      <meta-data
+          android:name="android.accessibilityservice"
+          android:resource="@xml/foldmouse_accessibility_service"/>
+    </service>
+
     <activity android:name="juloo.keyboard2.SettingsActivity" android:icon="@mipmap/ic_launcher" android:theme="@style/settingsTheme" android:exported="true" android:directBootAware="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
