@@ -8,5 +8,23 @@
     <TextView android:id="@+id/candidates_lang_name" style="@style/candidates_lang_name"/>
     <Button android:id="@+id/dictionary_switch" style="@style/change_dictionary"/>
   </juloo.keyboard2.suggestions.CandidatesView>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="36dp"
+      android:gravity="end|center_vertical"
+      android:paddingEnd="4dp">
+    <Button
+        android:id="@+id/foldmouse_switch"
+        android:layout_width="72dp"
+        android:layout_height="36dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="0dp"
+        android:text="🖱"
+        android:textSize="20sp"
+        android:contentDescription="Open FoldMouse touchpad"/>
+  </LinearLayout>
+
   <juloo.keyboard2.Keyboard2View android:id="@+id/keyboard_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 </LinearLayout>
