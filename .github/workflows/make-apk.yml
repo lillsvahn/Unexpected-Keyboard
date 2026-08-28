@@ -65,3 +65,5 @@ jobs:
       with:
         name: "${{env.artifact}} debug_apk"
         path: build/outputs/apk/debug/*.apk
+
+# FoldMouse integration build trigger
