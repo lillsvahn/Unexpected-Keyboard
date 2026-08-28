@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="foldmouse_accessibility_description">Shows the FoldMouse pointer and lets the integrated touchpad click, drag and scroll in other apps.</string>
+</resources>
