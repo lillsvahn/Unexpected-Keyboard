@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class FoldMousePane extends LinearLayout
 {
   private final Keyboard2 _host;
+  private final View _keyboardView;
   private final TextView _pad;
 
   private float _lastTouchX = 0f;
@@ -28,10 +29,11 @@ public class FoldMousePane extends LinearLayout
   private int _padMaxPointers = 0;
   private long _padDownTime = 0L;
 
-  public FoldMousePane(Keyboard2 host)
+  public FoldMousePane(Keyboard2 host, View keyboardView)
   {
     super(host);
     _host = host;
+    _keyboardView = keyboardView;
 
     setOrientation(VERTICAL);
     setPadding(dp(8), dp(8), dp(8), dp(8));
@@ -137,7 +139,10 @@ public class FoldMousePane extends LinearLayout
     Button keyboard = new Button(host);
     keyboard.setText("⌨");
     keyboard.setContentDescription("Back to keyboard");
-    keyboard.setOnClickListener(v -> _host.showKeyboardFromFoldMouse());
+    keyboard.setOnClickListener(v -> {
+      onHidden();
+      _host.setInputView(_keyboardView);
+    });
 
     buttonRow.addView(lmb, new LinearLayout.LayoutParams(0, dp(58), 1f));
     buttonRow.addView(rmb, new LinearLayout.LayoutParams(0, dp(58), 1f));
