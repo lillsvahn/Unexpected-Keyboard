@@ -27,7 +27,7 @@
     </service>
 
     <service
-        android:name="juloo.keyboard2.StandaloneFoldMouseAccessibilityService"
+        android:name="juloo.keyboard2.StandaloneFoldMouseAccessibilityServiceV2"
         android:label="FoldMouse floating pad"
         android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
         android:exported="false">
