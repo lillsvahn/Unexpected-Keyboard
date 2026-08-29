@@ -5,5 +5,5 @@
     android:notificationTimeout="50"
     android:canRetrieveWindowContent="false"
     android:canPerformGestures="true"
-    android:accessibilityFlags="flagDefault|flagRequestAccessibilityButton"
+    android:accessibilityFlags="flagDefault"
     android:description="@string/foldmouse_accessibility_description" />
