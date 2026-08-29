@@ -14,8 +14,8 @@
     </service>
 
     <service
-        android:name="juloo.keyboard2.FoldMouseAccessibilityBridgeService"
-        android:label="FoldMouse pointer"
+        android:name="juloo.keyboard2.FoldMouseAccessibilityService"
+        android:label="FoldMouse keyboard pointer"
         android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
         android:exported="false">
       <intent-filter>
@@ -24,6 +24,19 @@
       <meta-data
           android:name="android.accessibilityservice"
           android:resource="@xml/foldmouse_accessibility_service"/>
+    </service>
+
+    <service
+        android:name="juloo.keyboard2.StandaloneFoldMouseAccessibilityService"
+        android:label="FoldMouse floating pad"
+        android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService"/>
+      </intent-filter>
+      <meta-data
+          android:name="android.accessibilityservice"
+          android:resource="@xml/foldmouse_standalone_accessibility_service"/>
     </service>
 
     <activity android:name="juloo.keyboard2.SettingsActivity" android:icon="@mipmap/ic_launcher" android:theme="@style/settingsTheme" android:exported="true" android:directBootAware="true">
