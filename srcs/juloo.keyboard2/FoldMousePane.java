@@ -159,8 +159,6 @@ public class FoldMousePane extends LinearLayout
   public void onShown()
   {
     FoldMouseAccessibilityService mouse = mouse();
-    if (mouse instanceof FoldMouseAccessibilityBridgeService)
-      ((FoldMouseAccessibilityBridgeService)mouse).setKeyboardPaneOpen(true);
     if (mouse != null)
       mouse.showCursor();
     refreshStatus();
@@ -169,8 +167,6 @@ public class FoldMousePane extends LinearLayout
   public void onHidden()
   {
     FoldMouseAccessibilityService mouse = mouse();
-    if (mouse instanceof FoldMouseAccessibilityBridgeService)
-      ((FoldMouseAccessibilityBridgeService)mouse).setKeyboardPaneOpen(false);
     if (mouse != null)
       mouse.hideCursor();
   }
