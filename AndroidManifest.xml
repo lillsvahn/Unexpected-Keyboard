@@ -14,7 +14,7 @@
     </service>
 
     <service
-        android:name="juloo.keyboard2.FoldMouseAccessibilityService"
+        android:name="juloo.keyboard2.FoldMouseAccessibilityBridgeService"
         android:label="FoldMouse pointer"
         android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
         android:exported="false">
