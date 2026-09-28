@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public final class ClipboardHistoryView extends NonScrollListView
+public final class ClipboardHistoryView extends NonScrollGridView
   implements ClipboardHistoryService.OnClipboardHistoryChange
 {
   List<String> _history;
