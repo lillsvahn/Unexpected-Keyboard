@@ -16,18 +16,18 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="36dp"
-      android:gravity="end|center_vertical"
-      android:paddingEnd="4dp">
-    <juloo.keyboard2.FoldMouseSwitchButton
-        android:id="@+id/foldmouse_switch"
-        android:layout_width="72dp"
+      android:gravity="start|center_vertical"
+      android:paddingStart="4dp">
+    <ImageButton
+        android:id="@+id/clipboard_switch"
+        android:layout_width="48dp"
         android:layout_height="36dp"
-        android:minWidth="0dp"
-        android:minHeight="0dp"
-        android:padding="0dp"
-        android:text="🖱"
-        android:textSize="20sp"
-        android:contentDescription="Open FoldMouse touchpad"/>
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_clipboard_paste"
+        android:tint="?attr/colorLabel"
+        android:contentDescription="@string/key_descr_clipboard"
+        android:onClick="open_clipboard"/>
   </LinearLayout>
 
   <juloo.keyboard2.Keyboard2View android:id="@+id/keyboard_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
