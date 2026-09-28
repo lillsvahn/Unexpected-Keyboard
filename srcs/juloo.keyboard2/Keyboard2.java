@@ -415,6 +415,19 @@ public class Keyboard2 extends InputMethodService
     launch_dictionaries_activity();
   }
 
+  /** Open the clipboard pane from the keyboard toolbar. */
+  public void open_clipboard(View v)
+  {
+    show_clipboard_pane();
+  }
+
+  private void show_clipboard_pane()
+  {
+    if (_clipboard_pane == null)
+      _clipboard_pane = (ViewGroup)inflate_view(R.layout.clipboard_pane);
+    setInputView(_clipboard_pane);
+  }
+
   void start_activity(Class cls)
   {
     Intent intent = new Intent(this, cls);
@@ -450,9 +463,7 @@ public class Keyboard2 extends InputMethodService
           break;
 
         case SWITCH_CLIPBOARD:
-          if (_clipboard_pane == null)
-            _clipboard_pane = (ViewGroup)inflate_view(R.layout.clipboard_pane);
-          setInputView(_clipboard_pane);
+          show_clipboard_pane();
           break;
 
         case SWITCH_BACK_EMOJI:
