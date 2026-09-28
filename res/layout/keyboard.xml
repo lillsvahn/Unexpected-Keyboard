@@ -16,11 +16,11 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="36dp"
-      android:gravity="start|center_vertical"
-      android:paddingStart="4dp">
+      android:gravity="end|center_vertical"
+      android:paddingEnd="4dp">
     <ImageButton
         android:id="@+id/clipboard_switch"
-        android:layout_width="48dp"
+        android:layout_width="72dp"
         android:layout_height="36dp"
         android:padding="8dp"
         android:background="@android:color/transparent"
