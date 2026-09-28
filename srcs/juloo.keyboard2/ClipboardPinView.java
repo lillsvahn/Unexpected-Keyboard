@@ -15,7 +15,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public final class ClipboardPinView extends NonScrollListView
+public final class ClipboardPinView extends NonScrollGridView
 {
   /** Preference file name that store pinned clipboards. */
   static final String PERSIST_FILE_NAME = "clipboards";
