@@ -14,8 +14,10 @@ public final class ClipboardHistoryService
   /** Start the service on startup and start listening to clipboard changes. */
   public static void on_startup(Context ctx, ClipboardPasteCallback cb)
   {
-    get_service(ctx);
+    ClipboardHistoryService service = get_service(ctx);
     _paste_callback = cb;
+    if (service != null && Config.globalConfig().clipboard_history_enabled)
+      service.add_current_clip();
   }
 
   /** Start the service if it hasn't been started before. Returns [null] if the
@@ -47,10 +49,8 @@ public final class ClipboardHistoryService
       _paste_callback.paste_from_clipboard_pane(clip);
   }
 
-  /** The maximum size limits the amount of user data stored in memory but also
-      gives a sense to the user that the history is not persisted and can be
-      forgotten as soon as the app stops. */
-  public static final int MAX_HISTORY_SIZE = 6;
+  /** Keep a useful recent-text list while the keyboard process is alive. */
+  public static final int MAX_HISTORY_SIZE = 20;
 
   static ClipboardHistoryService _service = null;
   static ClipboardPasteCallback _paste_callback = null;
