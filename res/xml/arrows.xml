@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Direct-tap navigation panel opened from the main keyboard. -->
+<keyboard bottom_row="false">
+  <row height="1.35">
+    <key role="action" key0="left"/>
+    <key role="action" key0="up"/>
+    <key role="action" key0="down"/>
+    <key role="action" key0="right"/>
+  </row>
+  <row height="0.95">
+    <key role="action" key0="switch_text"/>
+    <key width="3" role="space_bar" key0="space"/>
+    <key role="action" key0="backspace" key2="delete"/>
+    <key role="action" key0="enter" key2="action"/>
+  </row>
+</keyboard>
