@@ -2,9 +2,7 @@
 <!-- Traditional direct-tap arrow cluster opened from the main keyboard. -->
 <keyboard bottom_row="false">
   <row height="1.05">
-    <key width="1.3" role="action" key0="loc compose"/>
-    <key width="1.3" role="action" key0="up"/>
-    <key width="1.3" role="action" key0="loc compose"/>
+    <key shift="1.3" width="1.3" role="action" key0="up"/>
   </row>
   <row height="1.05">
     <key width="1.3" role="action" key0="left"/>
