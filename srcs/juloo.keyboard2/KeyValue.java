@@ -21,6 +21,7 @@ public final class KeyValue implements Comparable<KeyValue>
     SWITCH_FORWARD,
     SWITCH_BACKWARD,
     SWITCH_GREEKMATH,
+     SWITCH_ARROWS,
     CAPS_LOCK,
     SWITCH_VOICE_TYPING,
     SWITCH_VOICE_TYPING_CHOOSER,
@@ -650,6 +651,7 @@ public final class KeyValue implements Comparable<KeyValue>
       case "switch_forward": return eventKey(0xE013, Event.SWITCH_FORWARD, FLAG_SMALLER_FONT);
       case "switch_backward": return eventKey(0xE014, Event.SWITCH_BACKWARD, FLAG_SMALLER_FONT);
       case "switch_greekmath": return eventKey("πλ∇¬", Event.SWITCH_GREEKMATH, FLAG_SMALLER_FONT);
+       case "switch_arrows": return eventKey("↕", Event.SWITCH_ARROWS, FLAG_SMALLER_FONT);
       case "change_method": return CHANGE_METHOD;
       case "change_method_prev": return CHANGE_METHOD_PREV;
       case "change_method_next": return CHANGE_METHOD_NEXT;
