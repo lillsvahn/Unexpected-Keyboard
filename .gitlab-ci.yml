@@ -17,8 +17,16 @@ build_debug_apk:
   stage: build
   before_script:
     - chmod +x gradlew
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
+    - git submodule sync --recursive || true
+    - git submodule update --init --recursive || true
+    - |
+      if [ ! -d vendor/cdict/java ]; then
+        echo "cdict submodule was not materialized by GitLab; fetching pinned cdict revision directly."
+        rm -rf vendor/cdict
+        git clone https://github.com/Julow/cdict.git vendor/cdict
+        git -C vendor/cdict checkout 4e29981795f6d143337511108f4e030269f3fab2
+      fi
+    - test -d vendor/cdict/java
   script:
     - ./gradlew --no-daemon assembleDebug
   artifacts:
