@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Direct-tap navigation panel opened from the main keyboard. -->
+<!-- Traditional direct-tap arrow cluster opened from the main keyboard. -->
 <keyboard bottom_row="false">
-  <row height="1.35">
-    <key role="action" key0="left"/>
-    <key role="action" key0="up"/>
-    <key role="action" key0="down"/>
-    <key role="action" key0="right"/>
+  <row height="1.05">
+    <key width="1.3" role="action" key0="loc compose"/>
+    <key width="1.3" role="action" key0="up"/>
+    <key width="1.3" role="action" key0="loc compose"/>
+  </row>
+  <row height="1.05">
+    <key width="1.3" role="action" key0="left"/>
+    <key width="1.3" role="action" key0="down"/>
+    <key width="1.3" role="action" key0="right"/>
   </row>
   <row height="0.95">
     <key role="action" key0="switch_text"/>
