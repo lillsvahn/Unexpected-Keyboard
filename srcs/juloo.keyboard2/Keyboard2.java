@@ -507,6 +507,10 @@ public class Keyboard2 extends InputMethodService
           setSpecialLayout(loadNumpad(R.xml.greekmath));
           break;
 
+        case SWITCH_ARROWS:
+          setSpecialLayout(loadLayout(R.xml.arrows));
+          break;
+
         case CAPS_LOCK:
           set_shift_state(true, true);
           break;
